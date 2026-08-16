@@ -6,7 +6,7 @@ framework:
     name: "@rathnasgala/theme"
     version: 0.0.9
 site:
-  id: unavailable
+  id: 01M04W1ZQM5D2XKK3HZTA9K73F
   name: New Gala Site
   author: New Gala Site
   defaultLanguage: en
@@ -14,8 +14,8 @@ site:
 hosting:
   provider: github-pages
   topology: provider-default
-  canonicalBaseUrl: unavailable
-  pathPrefix: /unavailable
+  canonicalBaseUrl: https://rfai8me.github.io
+  pathPrefix: /my-website
   canonicalPolicy: self
 design:
   theme: editorial
