@@ -1,5 +1,5 @@
 schemaVersion: 1
-deployedCommitSha: ebc7f20513cd370cb85a8ea970cf05196fa0a391
+deployedCommitSha: 00d87240a49da257f85a7654ef737bfad2e0b545
 posts:
   - id: 01K00000000000000000000000
     slug: example
@@ -8,6 +8,11 @@ posts:
         firstPublishedOn: 2026-08-16
   - id: 01M04W4FSGMYBS62SHBH6TGZDP
     slug: my-new-post
+    languages:
+      en:
+        firstPublishedOn: 2026-08-16
+  - id: 01M05KZFX8PQ269TJMCDQJ4SW5
+    slug: my-new-post-2
     languages:
       en:
         firstPublishedOn: 2026-08-16
