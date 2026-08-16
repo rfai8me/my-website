@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "providers": [
+    {
+      "id": "youtube",
+      "source": "https://support.google.com/youtube/answer/171780",
+      "verifiedOn": "2026-08-14",
+      "status": "verified-iframe",
+      "patterns": [
+        "^https://(?:www\\.)?youtube\\.com/watch\\?v=([A-Za-z0-9_-]{11})(?:&[^\\s]*)?$",
+        "^https://youtu\\.be/([A-Za-z0-9_-]{11})(?:\\?[^\\s]*)?$"
+      ],
+      "activationTemplate": "https://www.youtube-nocookie.com/embed/{1}",
+      "label": "Watch on YouTube"
+    },
+    {
+      "id": "codepen",
+      "source": "https://blog.codepen.io/documentation/embedded-pens/",
+      "verifiedOn": "2026-08-14",
+      "status": "verified-iframe",
+      "patterns": [
+        "^https://codepen\\.io/([A-Za-z0-9_-]+)/pen/([A-Za-z0-9_-]+)/?$"
+      ],
+      "activationTemplate": "https://codepen.io/{1}/embed/{2}",
+      "label": "Run on CodePen"
+    },
+    {
+      "id": "gist",
+      "source": "https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists",
+      "verifiedOn": "2026-08-14",
+      "status": "verified-script-only",
+      "patterns": [
+        "^https://gist\\.github\\.com/([A-Za-z0-9_-]+)/([0-9a-fA-F]+)(?:#[A-Za-z0-9_-]+)?$"
+      ],
+      "labelTemplate": "View Gist by {1}"
+    },
+    {
+      "id": "x",
+      "source": "https://help.x.com/en/using-x/how-to-embed-a-post",
+      "verifiedOn": "2026-08-14",
+      "status": "verified-script-only",
+      "patterns": [
+        "^https://x\\.com/([A-Za-z0-9_]{1,15})/status/([0-9]+)$"
+      ],
+      "label": "View post on X"
+    }
+  ]
+}

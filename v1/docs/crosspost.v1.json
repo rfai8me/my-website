@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "providers": {
+    "devto": {
+      "source": "https://developers.forem.com/api/v1#tag/articles/operation/createArticle",
+      "verifiedOn": "2026-08-13",
+      "status": "verified",
+      "frontmatter": { "title": "title", "published": "published", "canonicalUrl": "canonical_url", "description": "description", "tags": "tags", "coverImage": "main_image" }
+    },
+    "hashnode": {
+      "source": "https://docs.hashnode.com/blogs/editor/writing-a-blog-post",
+      "verifiedOn": "2026-08-13",
+      "status": "blocked-provider-does-not-publish-exact-import-key-contract",
+      "verifiedCapabilities": ["title", "canonicalUrl", "tags", "coverImage"]
+    },
+    "medium": {
+      "source": "https://help.medium.com/hc/en-us/articles/360033930293-Set-a-canonical-link",
+      "verifiedOn": "2026-08-13",
+      "status": "blocked-provider-does-not-publish-markdown-frontmatter-import-contract",
+      "verifiedCapabilities": ["canonicalUrl"]
+    }
+  }
+}

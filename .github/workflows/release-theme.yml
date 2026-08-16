@@ -1,0 +1,56 @@
+name: Release theme
+
+on:
+  push:
+    tags:
+      - theme-v*
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    environment: npm-theme-release
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Configure Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24.13.0
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install exact release tooling
+        run: npm install --global npm@11.19.0
+
+      - name: Verify template and stage immutable artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts
+          npm test
+          npm run lint
+          node --check scripts/stage-theme-package.js
+          node --check test/theme-package-stage.test.js
+          node --check test/theme-release-workflow.test.js
+          staging="$(mktemp -d)"
+          trap 'rm -rf -- "$staging"' EXIT
+          node scripts/stage-theme-package.js "$staging"
+          expected="${GITHUB_REF_NAME#theme-v}"
+          actual="$(node -p "require('$staging/package.json').version")"
+          test "$actual" = "$expected"
+          npm pack "$staging" --dry-run
+          tar -C "$staging" -cf "$RUNNER_TEMP/gala-theme-package.tar" .
+
+      - name: Publish with trusted publishing and provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          staging="$(mktemp -d)"
+          trap 'rm -rf -- "$staging"' EXIT
+          tar -C "$staging" -xf "$RUNNER_TEMP/gala-theme-package.tar"
+          npm publish "$staging" --access public --provenance
