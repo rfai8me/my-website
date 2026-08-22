@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://rfai8me.github.io/my-website/en/example/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rfai8me.github.io/my-website/en/example/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rfai8me.github.io/my-website/en/example/"/>
+  </url>
+  <url>
+    <loc>https://rfai8me.github.io/my-website/en/my-new-post-2/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rfai8me.github.io/my-website/en/my-new-post-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rfai8me.github.io/my-website/en/my-new-post-2/"/>
+  </url>
+  <url>
+    <loc>https://rfai8me.github.io/my-website/en/my-new-post/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rfai8me.github.io/my-website/en/my-new-post/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rfai8me.github.io/my-website/en/my-new-post/"/>
+  </url>
+</urlset>
